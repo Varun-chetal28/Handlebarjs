@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrap">
+      <h1 class="char">Game Of Thrones Characters</h1>
+        <!-- <h1>Handlebars Tutorial</h1> -->
+        <div id="data-container">
+
+        </div>
+      </div>
+    
+      
+      <script id="gameofthronesData" type="text/x-handlebars-template">
+      {{#each gotData}}
+        <div class="picture">
+          <div class="photo-column">
+            <img src="{{imageUrl}}">
+          </div>
+      
+          <div class="info-column">
+            <h2 class="fullname">Name :{{fullName}}</h2>  
+            <h3 class="house">House :{{family}}</h3> 
+            <h4 class="title">Title: {{title}}</h4>
+          </div>
+        </div>
+      {{/each}}
+      </script>
+      <a class="load" href="#gameofthronesData"> Load more </a>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
